@@ -10,9 +10,6 @@ li {
     padding: .5rem 1rem;
     background-color: darkcyan;
     border-radius: 5%;
-}
-
-a, a:hover, a:visited {
     color: cornsilk;
     font-size: 1.5rem;
     text-decoration: none;

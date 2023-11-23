@@ -1,6 +1,6 @@
 const menuentries = [
     {
-        entry: "item1",
+        entry: "Article",
         url: "https://www.w3schools.com",
     },
     {
