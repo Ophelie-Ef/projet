@@ -4,8 +4,8 @@ import "./Menu.css";
 
 const Menu = (props) => {
     return (
-        <nav>Bonjour !
-            <ListMenu sendEntries={props.sendEntries}></ListMenu>
+        <nav>
+            <ListMenu sendEntries={props.sendEntries} handleDisplayArticle={props.handleDisplayArticle}></ListMenu>
         </nav>
     )
 }

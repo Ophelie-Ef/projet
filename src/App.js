@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Menu from './components/Menu/Menu';
@@ -6,16 +7,22 @@ import { menuentries } from './menuentries';
 import Article from './components/Article/Article';
 
 const App = () => {
+  const [state, setState] = React.useState({ 'displayArticle': false });
+  const handleDisplayArticle = () => {
+    setState({'displayArticle':!state.displayArticle})
+    // state.displayArticle= !state.displayArticle ==>> INTERDIT !!!
+    console.dir(state.displayArticle);
+  }
   return (
     <>
       <header>
-        <Menu sendEntries={menuentries}></Menu>
-        <Slider />
-        <Article></Article>
+        <Menu sendEntries={menuentries} handleDisplayArticle={handleDisplayArticle}></Menu>
       </header>
-      <main></main>
+      <main>
+        {state.displayArticle ? <Article></Article> : <></>}
+      </main>
       <footer></footer>
-    </>
+    </> 
   );
 }
 

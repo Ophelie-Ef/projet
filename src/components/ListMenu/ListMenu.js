@@ -8,9 +8,10 @@ const ListMenu = (props) => {
       {
         props.sendEntries.map((value, index) => {
           return (
-            <li // Un event ne peux pas être directement conditionné
+            <li
+              // Un event ne peux pas être directement conditionné
               onClick={
-                value.entry === "Article" ? onClick = () => alert("Lorem ipsum !!!") : ""
+                value.entry === "Article" ? props.handleDisplayArticle : null
               }
               key={index} >{value.entry}</li>
           )
